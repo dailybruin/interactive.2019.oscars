@@ -8,6 +8,7 @@ import {
   XPosition,
   YPosition,
 } from '@dailybruin/lux'
+import { CustomArticleGrid } from '../components/ArticleGrid'
 
 export const query = graphql`
   query {
@@ -27,8 +28,23 @@ export const query = graphql`
         value
       }
     }
+    allGoogleSheetRow {
+      edges {
+        node {
+          section
+          iscolumn
+          headline
+          byline
+          imageurl
+          imagecredits
+          imagedescription
+          link
+        }
+      }
+    }
   }
 `
+
 const IndexPage = ({ data }) => (
   <>
     <Head {...data.site.siteMetadata} />
@@ -39,6 +55,7 @@ const IndexPage = ({ data }) => (
       xPosition={XPosition.Center}
       yPosition={YPosition.Center}
     />
+    {CustomArticleGrid(data)}
     <Article dropcap={true} content={data.kerckhoffArticle.content} />
     <Footer developers="Nathan Smith" copyrightYear={2018} />
   </>
