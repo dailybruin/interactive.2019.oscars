@@ -49,6 +49,9 @@ export const CustomArticleGrid = data => {
     h2 {
       font-family: Merriweather;
     }
+    article {
+      height: 609px;
+    }
   `
   const sections = extractSectionsFromArticleEdges(data.allGoogleSheetRow.edges)
 
