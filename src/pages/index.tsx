@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import { SimplePieChart } from '../components/circleGraph'
 import {
   Article,
   CoverPhoto,
@@ -40,6 +41,7 @@ const IndexPage = ({ data }) => (
       yPosition={YPosition.Center}
     />
     <Article dropcap={true} content={data.kerckhoffArticle.content} />
+    <SimplePieChart />
     <Footer developers="Nathan Smith" copyrightYear={2018} />
   </>
 )
