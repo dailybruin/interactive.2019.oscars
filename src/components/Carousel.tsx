@@ -10,7 +10,7 @@ interface CarouselProps {
   imageURLs: string[],
 }
 
-class ImageCarousel extends React.Component<CarouselProps> {
+class Carousel extends React.Component<CarouselProps> {
 
   render() {
     const params = {
@@ -18,7 +18,6 @@ class ImageCarousel extends React.Component<CarouselProps> {
       WrapperEl: 'section',
       pagination: {
         el: '.swiper-pagination',
-        type: 'bullets',
         clickable: true
       },
       navigation: {
@@ -27,25 +26,19 @@ class ImageCarousel extends React.Component<CarouselProps> {
       },
       renderPrevButton: () => <img className="swiper-button-prev" src={leftArrow}/>,
       renderNextButton: () => <img className="swiper-button-next" src={rightArrow}/>,
-      spaceBetween: 30
     }
 
     return (
       <div>
-        <Swiper {...params}>
+        <Swiper {...params} className={css`background-color: black`}>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.css"></link>
           {this.props.imageURLs.map((image) =>
             <div className={css`
-                padding: 32px;
-                background-color: hotpink;
-                font-size: 24px;
-                border-radius: 4px;
+                text-align: center;
+                background-color: black;
               `}
             >
-              <img 
-                alt="img" 
-                src={ image } 
-              />
+              <img src={ image }/>
             </div>
           )}
         </Swiper>
@@ -54,4 +47,4 @@ class ImageCarousel extends React.Component<CarouselProps> {
   }
 }
 
-export default ImageCarousel;
+export default Carousel;

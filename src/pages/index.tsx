@@ -8,12 +8,8 @@ import {
   XPosition,
   YPosition,
 } from '@dailybruin/lux'
-<<<<<<< HEAD
-import ImageCarousel from '../components/Carousel'
-import Carousel from 'nuka-carousel';
-=======
 import { CustomArticleGrid } from '../components/ArticleGrid'
->>>>>>> 2b2fd8514bc229749b8477abdfd844f04f7d3d7e
+import Carousel from '../components/Carousel'
 
 export const query = graphql`
   query {
@@ -53,7 +49,7 @@ export const query = graphql`
 const IndexPage = ({ data }) => (
   <>
     <Head {...data.site.siteMetadata} />
-    <ImageCarousel imageURLs={[
+    <Carousel imageURLs={[
       'https://s3.amazonaws.com/images.seroundtable.com/google-submit-url-1516800645.jpg',
       'https://s3.amazonaws.com/images.seroundtable.com/google-submit-url-1516800645.jpg',
       'https://s3.amazonaws.com/images.seroundtable.com/google-submit-url-1516800645.jpg',
