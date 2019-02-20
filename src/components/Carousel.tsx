@@ -6,6 +6,8 @@ import Swiper from 'react-id-swiper'
 import leftArrow from '../images/left.png'
 import rightArrow from '../images/right.png'
 
+import './styles.css'
+
 interface CarouselProps {
   imageURLs: string[],
 }
@@ -21,11 +23,11 @@ class Carousel extends React.Component<CarouselProps> {
         clickable: true
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
       },
-      renderPrevButton: () => <img className="swiper-button-prev" src={leftArrow}/>,
-      renderNextButton: () => <img className="swiper-button-next" src={rightArrow}/>,
+      renderPrevButton: () => <img className="button-prev" src={leftArrow}/>,
+      renderNextButton: () => <img className="button-next" src={rightArrow}/>,
     }
 
     return (
