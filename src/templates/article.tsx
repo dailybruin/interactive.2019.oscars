@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { Article, Footer, Headline, Byline } from '@dailybruin/lux'
+import { Article, Headline, Byline } from '@dailybruin/lux'
+import CustomHeadline from '../components/CustomHeadline'
 import { css } from 'react-emotion'
 import { BackToHome } from '../components/BackToHome'
 
@@ -34,7 +35,7 @@ export default ({ data }) => {
           margin: 25px;
         `}
       >
-        <Headline text={data.kerckhoffArticle.headline} />
+        <CustomHeadline text={data.kerckhoffArticle.headline} />
         <Byline authors={data.kerckhoffArticle.author} />
         <Article dropcap={true} content={data.kerckhoffArticle.content} />
       </div>

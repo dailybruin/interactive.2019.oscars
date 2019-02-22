@@ -47,6 +47,7 @@ export const CustomArticleGrid = (data, onlyRelated) => {
       background-color: white;
       margin: 5px;
       div,
+      p,
       h2 {
         margin: 20px;
         margin-top: 0px;
