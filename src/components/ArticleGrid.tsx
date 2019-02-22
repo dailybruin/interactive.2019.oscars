@@ -42,11 +42,9 @@ export const CustomArticleGrid = data => {
   `
   const articleStyle = css`
     font-family: Lato;
-    h2 {
-      font-family: Merriweather;
-    }
     article {
       height: 609px;
+      background-color: white;
     }
   `
   const sections = extractSectionsFromArticleEdges(data.allGoogleSheetRow.edges)

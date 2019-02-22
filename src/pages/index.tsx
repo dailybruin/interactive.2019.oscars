@@ -1,16 +1,10 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { SimplePieChart } from '../components/circleGraph'
-import {
-  Article,
-  CoverPhoto,
-  Footer,
-  Head,
-  XPosition,
-  YPosition,
-} from '@dailybruin/lux'
+import { Footer, Head, XPosition, YPosition } from '@dailybruin/lux'
 import { css } from 'react-emotion'
 import { CustomArticleGrid } from '../components/ArticleGrid'
+import CustomCover from '../components/CustomCover'
 
 export const query = graphql`
   query {
@@ -54,17 +48,25 @@ const IndexPage = ({ data }) => (
   >
     {console.log(data)}
     <Head {...data.site.siteMetadata} />
-    <CoverPhoto
-      headline={data.kerckhoffArticle.headline}
+    <CustomCover
+      headline="SILVER SCREEN WONDERS"
       authors={data.kerckhoffArticle.author}
-      imageURL="https://chancellor.ucla.edu/wp-content/uploads/2018/07/ChancellorBlock_1366x912_acf_cropped.jpg"
+      imageURL="https://assets.dailybruin.com/images/interactive.2019.oscars/coverphoto-9dfc29c0f3a4defc19dbf58c5ba2b6a6.png"
       xPosition={XPosition.Center}
-      yPosition={YPosition.Center}
+      yPosition={YPosition.Top}
     />
     {CustomArticleGrid(data)}
-    <Article dropcap={true} content={data.kerckhoffArticle.content} />
     <SimplePieChart />
-    <Footer developers="Nathan Smith" copyrightYear={2018} />
+    <Footer
+      developers={[
+        'Richard Yang',
+        'Mindi Cao',
+        'Karl Huang',
+        'Max Wu',
+        'Felix Zhang',
+      ]}
+      copyrightYear={2019}
+    />
   </div>
 )
 

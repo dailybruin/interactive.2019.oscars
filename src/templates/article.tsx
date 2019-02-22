@@ -1,14 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import {
-  Article,
-  CoverPhoto,
-  Footer,
-  Head,
-  XPosition,
-  YPosition,
-} from '@dailybruin/lux'
-import { CustomArticleGrid } from '../components/ArticleGrid'
+import { Article, Footer, Headline, Byline } from '@dailybruin/lux'
+import { css } from 'react-emotion'
 
 export const query = graphql`
   query($name: String!) {
@@ -25,10 +18,33 @@ export const query = graphql`
 
 export default ({ data }) => {
   return (
-    <div>
-      {console.log(data)}
-      <Article dropcap={true} content={data.kerckhoffArticle.content} />
-      <Footer developers="Nathan Smith" copyrightYear={2018} />
+    <div
+      className={css`
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+      `}
+    >
+      <div
+        className={css`
+          max-width: 700px;
+          margin: 25px;
+        `}
+      >
+        <Headline text={data.kerckhoffArticle.headline} />
+        <Byline authors={data.kerckhoffArticle.author} />
+        <Article dropcap={true} content={data.kerckhoffArticle.content} />
+        <Footer
+          developers={[
+            'Richard Yang',
+            'Mindi Cao',
+            'Karl Huang',
+            'Max Wu',
+            'Felix Zhang',
+          ]}
+          copyrightYear={2019}
+        />
+      </div>
     </div>
   )
 }

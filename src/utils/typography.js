@@ -8,6 +8,10 @@ const typography = new Typography({
       name: 'Libre Baskerville',
       styles: ['400'],
     },
+    {
+      name: 'Open Sans',
+      styles: ['300'],
+    },
     { name: 'Lato', styles: ['300'] },
     { name: 'Merriweather', styles: ['400'] },
   ],
