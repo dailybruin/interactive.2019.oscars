@@ -4,7 +4,7 @@ const siteName = 'Silver Screen Wonders: The 91st Academy Awards'
 const description =
   "This year's Oscars ceremony marks an important day in the life of Bruins who worked on nominated films. From prolific production to iconic costumes, find out more about how our alumni fit into the star studded event"
 const image =
-  'https://chancellor.ucla.edu/wp-content/uploads/2018/07/ChancellorBlock_1366x912_acf_cropped.jpg'
+  'https://assets.dailybruin.com/images/interactive.2019.oscars/splash-0bc13406a355b62b9ea4f28129dfa5cb.png'
 const year = '2019'
 
 const url = `https://features.dailybruin.com/${year}/${slugify(siteName)}`
@@ -16,6 +16,7 @@ module.exports = {
     url,
     image,
   },
+  pathPrefix: '/2019/oscars',
   plugins: [
     {
       resolve: 'gatsby-plugin-manifest',
