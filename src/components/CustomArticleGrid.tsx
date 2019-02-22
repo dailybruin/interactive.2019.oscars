@@ -24,15 +24,16 @@ export const query = graphql`
           byline
           imageurl
           imagecredits
-          imagedescription
+          imagealt
           link
+          description
         }
       }
     }
   }
 `
 
-export const CustomArticleGrid = data => {
+export const CustomArticleGrid = (data, onlyRelated) => {
   const headingStyle = css`
     font-family: Lato;
     font-weight: 300;
@@ -44,14 +45,19 @@ export const CustomArticleGrid = data => {
     font-family: Lato;
     article {
       background-color: white;
+      margin: 5px;
       div,
       h2 {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin: 20px;
+        margin-top: 0px;
+        letter-spacing: 0.01em;
       }
     }
   `
-  const sections = extractSectionsFromArticleEdges(data.allGoogleSheetRow.edges)
+  let sections = extractSectionsFromArticleEdges(data.allGoogleSheetRow.edges)
+  console.log('sections', sections)
+  if (onlyRelated) sections = ['Related Coverage']
+  else sections = ['Red Carpet Reel', "Critic's Choice"]
 
   const articleGrids = sections.map((section, i) => {
     const articles = convertEdgesToArticles(

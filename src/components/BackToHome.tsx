@@ -18,16 +18,23 @@ export const BackToHome = () => {
       `}
     >
       <span />
-      <Footer
-        developers={[
-          'Richard Yang',
-          'Mindi Cao',
-          'Karl Huang',
-          'Max Wu',
-          'Felix Zhang',
-        ]}
-        copyrightYear={2019}
-      />
+      <span
+        className={css`
+          margin-left: 85px;
+        `}
+      >
+        <Footer
+          developers={[
+            'Richard Yang',
+            'Mindi Cao',
+            'Karl Huang',
+            'Max Wu',
+            'Felix Zhang',
+            'Maggie Ching',
+          ]}
+          copyrightYear={2019}
+        />
+      </span>
       <Link
         to="/"
         className={css`
@@ -37,6 +44,7 @@ export const BackToHome = () => {
           display: flex;
           justify-content: center;
           align-items: center;
+          font-size: 0.9rem;
         `}
       >
         <img
@@ -46,8 +54,8 @@ export const BackToHome = () => {
             margin-right: 5px;
           `}
           alt="arrow"
-          width="20"
-          height="20"
+          width="15"
+          height="15"
         />
         return to home
       </Link>

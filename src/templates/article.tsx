@@ -37,16 +37,6 @@ export default ({ data }) => {
         <Headline text={data.kerckhoffArticle.headline} />
         <Byline authors={data.kerckhoffArticle.author} />
         <Article dropcap={true} content={data.kerckhoffArticle.content} />
-        <Footer
-          developers={[
-            'Richard Yang',
-            'Mindi Cao',
-            'Karl Huang',
-            'Max Wu',
-            'Felix Zhang',
-          ]}
-          copyrightYear={2019}
-        />
       </div>
       <BackToHome />
     </div>

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { SimplePieChart } from '../components/circleGraph'
 import { Footer, Head, XPosition, YPosition } from '@dailybruin/lux'
 import { css } from 'react-emotion'
-import { CustomArticleGrid } from '../components/ArticleGrid'
+import { CustomArticleGrid } from '../components/CustomArticleGrid'
 import CustomCover from '../components/CustomCover'
 
 export const query = graphql`
@@ -32,8 +32,9 @@ export const query = graphql`
           byline
           imageurl
           imagecredits
-          imagedescription
+          imagealt
           link
+          description
         }
       }
     }
@@ -56,8 +57,9 @@ const IndexPage = ({ data }) => (
       xPosition={XPosition.Center}
       yPosition={YPosition.Top}
     />
-    {CustomArticleGrid(data)}
+    {CustomArticleGrid(data, false)}
     <SimplePieChart />
+    {CustomArticleGrid(data, true)}
     <Footer
       developers={[
         'Richard Yang',
@@ -65,8 +67,12 @@ const IndexPage = ({ data }) => (
         'Karl Huang',
         'Max Wu',
         'Felix Zhang',
+        'Maggie Ching',
       ]}
       copyrightYear={2019}
+      style={css`
+        color: #f4cd6a;
+      `}
     />
   </div>
 )
