@@ -49,7 +49,8 @@ export default function CustomNavBar() {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-bottom: 125px;
+        margin-top: 75px;
+        margin-bottom: 75px;
       `}
     >
       <div
@@ -62,7 +63,7 @@ export default function CustomNavBar() {
           }
         `}
       >
-        <Slink text="Alumni at the Awards" linkedId="Red Carpet Reel" />
+        <Slink text="Red Carpet Reel" linkedId="Red Carpet Reel" />
         <Slink text="Critic’s Choice" linkedId="Critic's Choice" />
         <Slink text="Related Coverage" linkedId="Related Coverage" />
       </div>

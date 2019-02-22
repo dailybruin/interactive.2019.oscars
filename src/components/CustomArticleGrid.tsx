@@ -97,7 +97,7 @@ export const CustomArticleGrid = (data, onlyRelated) => {
           padding: 0px 1.0875rem 1.45rem;
           padding-top: 0px;
           h2 {
-            font-size: 5rem;
+            font-size: 4rem;
           }
         `}
       >

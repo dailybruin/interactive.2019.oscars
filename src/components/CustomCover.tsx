@@ -77,6 +77,9 @@ export default class CustomCover extends React.Component<CoverPhotoProps> {
             align-items: ${this.props.xPosition === 'center'
               ? this.props.xPosition
               : 'flex-' + this.props.xPosition};
+            @media screen and (max-width: 500px) {
+              margin-top: 80%;
+            }
           `}
         >
           <div
