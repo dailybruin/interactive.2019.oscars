@@ -43,6 +43,7 @@ export const query = graphql`
 const IndexPage = ({ data }) => (
   <div
     className={css`
+      height: 100%;
       background-color: #1e1b18;
     `}
   >

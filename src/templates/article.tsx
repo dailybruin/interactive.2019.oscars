@@ -2,6 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Article, Footer, Headline, Byline } from '@dailybruin/lux'
 import { css } from 'react-emotion'
+import { BackToHome } from '../components/BackToHome'
 
 export const query = graphql`
   query($name: String!) {
@@ -22,7 +23,9 @@ export default ({ data }) => {
       className={css`
         width: 100vw;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
       `}
     >
       <div
@@ -45,6 +48,7 @@ export default ({ data }) => {
           copyrightYear={2019}
         />
       </div>
+      <BackToHome />
     </div>
   )
 }
