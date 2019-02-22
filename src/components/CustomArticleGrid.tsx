@@ -45,6 +45,7 @@ export const CustomArticleGrid = (data, onlyRelated) => {
     font-family: Lato;
     article {
       background-color: white;
+      min-height: 400px;
       margin: 5px;
       p,
       div,
@@ -59,7 +60,6 @@ export const CustomArticleGrid = (data, onlyRelated) => {
     }
   `
   let sections = extractSectionsFromArticleEdges(data.allGoogleSheetRow.edges)
-  console.log('sections', sections)
   if (onlyRelated) sections = ['Related Coverage']
   else sections = ['Red Carpet Reel', "Critic's Choice"]
 
