@@ -32,7 +32,7 @@ export default ({ data }) => {
       <div
         className={css`
           max-width: 700px;
-          margin: 25px;
+          margin: 15px;
         `}
       >
         <CustomHeadline text={data.kerckhoffArticle.headline} />
