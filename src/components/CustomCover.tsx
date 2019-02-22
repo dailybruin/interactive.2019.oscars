@@ -127,26 +127,49 @@ export default class CustomCover extends React.Component<CoverPhotoProps> {
           >
             THE 91ST ACADEMY AWARDS
           </p>
-          {
-            <p
+          <p
+            className={css`
+              font-family: Open Sans;
+              color: #f4cd6a;
+              font-size: 1.2rem;
+              max-width: 1000px;
+              margin-left: 20px;
+              margin-right: 20px;
+              @media screen and (max-width: 800px) {
+                font-size: 16px;
+              }
+            `}
+          >
+            This year's Oscars ceremony marks an important day in the life of
+            Bruins who worked on nominated films. From prolific production to
+            iconic costumes, find out more about how our alumni fit into the
+            star studded event.
+          </p>
+          <p
+            className={css`
+              font-family: Open Sans;
+              color: #f4cd6a;
+              font-size: 1.05rem;
+              max-width: 1000px;
+              margin-left: 20px;
+              margin-right: 20px;
+              @media screen and (max-width: 800px) {
+                font-size: 16px;
+              }
+            `}
+          >
+            Plus, follow along on Twitter{' '}
+            <a
               className={css`
-                font-family: Open Sans;
-                color: #f4cd6a;
-                font-size: 1.2rem;
-                max-width: 1000px;
-                margin-left: 20px;
-                margin-right: 20px;
-                @media screen and (max-width: 800px) {
-                  font-size: 16px;
-                }
+                color: #fee9b5;
               `}
+              href="https://twitter.com/dailybruin"
+              target="_blank"
             >
-              This year's Oscars ceremony marks an important day in the life of
-              Bruins who worked on nominated films. From prolific production to
-              iconic costumes, find out more about how our alumni fit into the
-              star studded event.
-            </p>
-          }
+              @DailyBruin
+            </a>{' '}
+            as we cover the ceremony live on Sunday!
+          </p>
         </div>
       </div>
     )

@@ -28,6 +28,7 @@ export default function CustomNavBar() {
             margin-left: 5px;
             margin-right: 5px;
             font-size: 1.75rem;
+            text-align: center;
           `}
         >
           {props.text}
@@ -49,8 +50,14 @@ export default function CustomNavBar() {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 75px;
+        margin-top: 50px;
         margin-bottom: 75px;
+        @media screen and (max-width: 400px) {
+          margin-top: 100px;
+        }
+        @media screen and (max-width: 330px) {
+          margin-top: 200px;
+        }
       `}
     >
       <div
