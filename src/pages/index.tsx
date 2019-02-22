@@ -5,6 +5,7 @@ import { Footer, Head, XPosition, YPosition } from '@dailybruin/lux'
 import { css } from 'react-emotion'
 import { CustomArticleGrid } from '../components/CustomArticleGrid'
 import CustomCover from '../components/CustomCover'
+import CustomNavBar from '../components/CustomNavBar'
 
 export const query = graphql`
   query {
@@ -57,6 +58,7 @@ const IndexPage = ({ data }) => (
       xPosition={XPosition.Center}
       yPosition={YPosition.Top}
     />
+    <CustomNavBar />
     {CustomArticleGrid(data, false)}
     <SimplePieChart />
     {CustomArticleGrid(data, true)}

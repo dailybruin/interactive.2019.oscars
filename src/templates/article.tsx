@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { Article, Headline, Byline } from '@dailybruin/lux'
+import { Article, Byline } from '@dailybruin/lux'
 import CustomHeadline from '../components/CustomHeadline'
 import { css } from 'react-emotion'
 import { BackToHome } from '../components/BackToHome'

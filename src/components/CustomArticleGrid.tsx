@@ -46,12 +46,15 @@ export const CustomArticleGrid = (data, onlyRelated) => {
     article {
       background-color: white;
       margin: 5px;
-      div,
       p,
+      div,
       h2 {
-        margin: 20px;
+        margin: 15px;
         margin-top: 0px;
         letter-spacing: 0.01em;
+      }
+      h2 {
+        margin-bottom: 0px;
       }
     }
   `
@@ -65,14 +68,22 @@ export const CustomArticleGrid = (data, onlyRelated) => {
       data.allGoogleSheetRow.edges
     ).filter(article => article.section === section.toLowerCase())
     return (
-      <ArticleGrid
-        headingStyle={headingStyle}
-        key={i}
-        heading={section}
-        articles={articles}
-        maxColumns={2}
-        style={articleStyle}
-      />
+      <>
+        <div
+          id={`${section.split(' ')[0]}`}
+          className={css`
+            height: 1px;
+          `}
+        />
+        <ArticleGrid
+          headingStyle={headingStyle}
+          key={i}
+          heading={section}
+          articles={articles}
+          maxColumns={2}
+          style={articleStyle}
+        />
+      </>
     )
   })
 
