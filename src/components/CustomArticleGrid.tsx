@@ -56,6 +56,7 @@ export const CustomArticleGrid = (data, onlyRelated) => {
       }
       h2 {
         margin-bottom: 0px;
+        font-size: 1.5rem;
       }
     }
   `
@@ -95,6 +96,9 @@ export const CustomArticleGrid = (data, onlyRelated) => {
           max-width: 1103px;
           padding: 0px 1.0875rem 1.45rem;
           padding-top: 0px;
+          h2 {
+            font-size: 5rem;
+          }
         `}
       >
         {articleGrids}

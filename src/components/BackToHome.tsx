@@ -9,7 +9,7 @@ export const BackToHome = () => {
     <div
       className={css`
         width: 100vw;
-        height: 100px;
+        height: 150px;
         background-color: #1e1b18;
         display: flex;
         justify-content: space-between;
