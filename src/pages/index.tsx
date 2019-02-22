@@ -9,6 +9,7 @@ import {
   XPosition,
   YPosition,
 } from '@dailybruin/lux'
+import { css } from 'react-emotion'
 import { CustomArticleGrid } from '../components/ArticleGrid'
 
 export const query = graphql`
@@ -33,7 +34,6 @@ export const query = graphql`
       edges {
         node {
           section
-          iscolumn
           headline
           byline
           imageurl
@@ -47,7 +47,12 @@ export const query = graphql`
 `
 
 const IndexPage = ({ data }) => (
-  <>
+  <div
+    className={css`
+      background-color: #1e1b18;
+    `}
+  >
+    {console.log(data)}
     <Head {...data.site.siteMetadata} />
     <CoverPhoto
       headline={data.kerckhoffArticle.headline}
@@ -60,7 +65,7 @@ const IndexPage = ({ data }) => (
     <Article dropcap={true} content={data.kerckhoffArticle.content} />
     <SimplePieChart />
     <Footer developers="Nathan Smith" copyrightYear={2018} />
-  </>
+  </div>
 )
 
 export default IndexPage

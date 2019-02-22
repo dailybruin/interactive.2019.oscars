@@ -3,7 +3,7 @@ exports.createPages = ({ graphql, actions }) => {
   // **Note:** The graphql function call returns a Promise
   // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
   const { createPage } = actions
-  const articleNames = ['article.aml', 'article2.aml']
+  const articleNames = ['article.aml']
   articleNames.forEach(name => {
     return graphql(`
       {
@@ -18,7 +18,6 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       const ka = result.data.kerckhoffArticle
-      console.log('richardsux', name)
       createPage({
         path: ka.headline,
         component: path.resolve(`./src/templates/article.tsx`),

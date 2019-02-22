@@ -1,9 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import {
-  Footer,
-  Head,
-  Headline,
   ArticleGrid,
   convertEdgesToArticles,
   extractSectionsFromArticleEdges,
@@ -23,7 +20,6 @@ export const query = graphql`
       edges {
         node {
           section
-          iscolumn
           headline
           byline
           imageurl
