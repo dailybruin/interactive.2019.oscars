@@ -39,7 +39,7 @@
     "react-helmet": "5.2.0",
     "react-minimal-pie-chart": "^3.3.0",
     "react-typography": "0.16.18",
-    "recharts": "^1.4.3",
+    "recharts": "^2.0.0",
     "slugify": "1.3.4",
     "typography": "0.16.18"
   },
